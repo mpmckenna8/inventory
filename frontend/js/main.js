@@ -37,9 +37,11 @@ function makeItemsTable(items) {
 
         let row = itemsTable.insertRow( i + 1 )
         // putting a cell in the new row
-        let cell = row.insertCell( 0 )
-        cell.innerHTML = items[i].title
+        let cell_0 = row.insertCell( 0 )
+        cell_0.innerHTML = "<a href='item.html/?id="+ items[i].id +"'>" + items[i].title + "</a>";
 
+        let cell_1 = row.insertCell(1)
+        cell_1.innerHTML = items[i].content;
     }
 
 }
